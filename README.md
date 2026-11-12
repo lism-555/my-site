@@ -91,30 +91,23 @@ them while the snow keeps falling.
 
 ## Publishing
 
-It is live at **https://jqco1r5jnfl4a.space.mcode.cn**
+- **Live site (GitHub Pages):** https://lism-555.github.io/my-site/
+- **Repository:** https://github.com/lism-555/my-site
+- **Mirror on the MiniMax host:** https://jqco1r5jnfl4a.space.mcode.cn
 
-The folder is a plain static site, so there is no build step. Push it to
-GitHub and turn Pages on:
+The folder is a plain static site, so there is no build step. Pages is served
+straight from the root of `main`.
+
+To push a change:
 
 ```bash
 cd D:\minimaxcoding\my-site
-git remote add origin https://github.com/<you>/my-site.git
-git push -u origin main
+git push
 ```
 
-Then in the repository: **Settings → Pages → Source: Deploy from a branch →
-`main` / `(root)` → Save**. The site will be served from
-`https://<you>.github.io/my-site/` a minute later.
-
-If you would rather use the GitHub CLI:
-
-```bash
-winget install --id GitHub.cli
-gh auth login
-gh repo create my-site --public --source=. --push
-```
-
-Any other static host will serve the folder as-is.
+Pages rebuilds on its own within a minute or two. The repository lives at
+https://github.com/lism-555/my-site — **Settings → Pages → Source: Deploy
+from a branch → `main` / `(root)`** is already set that way.
 
 ---
 
