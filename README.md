@@ -91,17 +91,30 @@ them while the snow keeps falling.
 
 ## Publishing
 
+It is live at **https://jqco1r5jnfl4a.space.mcode.cn**
+
+The folder is a plain static site, so there is no build step. Push it to
+GitHub and turn Pages on:
+
 ```bash
-git init
-git add .
-git commit -m "The Attic Desk"
+cd D:\minimaxcoding\my-site
 git remote add origin https://github.com/<you>/my-site.git
 git push -u origin main
 ```
 
-Any static host will serve it as-is — there is no build step. GitHub Pages
-works: push the folder, turn Pages on for the branch, and the site is live at
-`https://<you>.github.io/my-site/`.
+Then in the repository: **Settings → Pages → Source: Deploy from a branch →
+`main` / `(root)` → Save**. The site will be served from
+`https://<you>.github.io/my-site/` a minute later.
+
+If you would rather use the GitHub CLI:
+
+```bash
+winget install --id GitHub.cli
+gh auth login
+gh repo create my-site --public --source=. --push
+```
+
+Any other static host will serve the folder as-is.
 
 ---
 
