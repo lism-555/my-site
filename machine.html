@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Machine &middot; The Attic Desk</title>
+<meta name="description" content="A contraption in brass and walnut with one lever and one slot. It does nothing useful. It is also very good at clearing snow.">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Ccircle cx='24' cy='24' r='22' fill='%235f1d2a'/%3E%3Ccircle cx='24' cy='24' r='17' fill='none' stroke='%23d9b45f' stroke-width='1.3'/%3E%3Cpath d='M24 13.5l5.4 9.2h-3.3l3.5 5.8H18.4l3.5-5.8h-3.3z' fill='%23e8cf92'/%3E%3C/svg%3E">
+</head>
+<body>
+
+<header class="site-head">
+  <div class="wrap" data-nav></div>
+</header>
+
+<main id="main">
+
+  <section class="machine-page">
+    <div class="wrap">
+
+      <div class="act">
+        <div class="act__body">
+          <span class="eyebrow">The Machine</span>
+          <h2>Brass, walnut, and one gear that drives nothing</h2>
+          <p>I built it in the spring and I still do not know what it is for. It has one lever, and one slot where a small card comes out. Pull the lever and it will do something. It will not, however, do anything useful.</p>
+          <p class="quiet">Some things are worth making for no reason at all. This is one of them.</p>
+        </div>
+
+        <div class="bench">
+          <div class="cabinet" id="machine">
+            <div class="cabinet__top">
+              <span class="cabinet__label">Model IV</span>
+              <span class="cabinet__label">No. 4</span>
+            </div>
+
+            <div class="cabinet__face">
+              <div class="dome" aria-hidden="true"><div class="flywheel"></div></div>
+              <div class="gauge" aria-hidden="true">
+                <div class="gauge__needle"></div>
+                <div class="gauge__pin"></div>
+              </div>
+              <button class="lever" id="lever" type="button">
+                <span class="lever__arm" aria-hidden="true"></span>
+                <span class="lever__knob" aria-hidden="true"></span>
+                <span class="sr-only">Pull the lever</span>
+              </button>
+            </div>
+
+            <div class="slot">
+              <p class="slip" id="slip" aria-live="polite">Something will come out.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="act act--flip">
+        <div class="act__body">
+          <span class="eyebrow">The one good thing it does</span>
+          <h2>Clearing the path</h2>
+          <p>There is a gate at one end of the yard and a tree at the other, and every time it snows the path between them is buried. The machine is good at exactly this and nothing else.</p>
+          <p>You get sixteen strokes of the shovel. The snow does not wait for you to finish.</p>
+        </div>
+
+        <div class="game">
+          <div class="game__bar">
+            <span class="game__strokes">Strokes left: <b id="strokes">16</b></span>
+            <span class="game__status" id="status">Clear a path from the gate to the tree.</span>
+          </div>
+
+          <div class="field" id="field" tabindex="0"
+               role="application"
+               aria-label="A yard under snow. Use the arrow keys to move, and space or enter to shovel. Open a path from the gate to the tree.">
+            <img class="field__shovel" id="shovel" alt=""
+                 src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Cpath d='M3.6 13.4h9.2v6.2c0 .9-.7 1.6-1.6 1.6H5.2c-.9 0-1.6-.7-1.6-1.6z' fill='%23c8d2da' stroke='%238f9aa4' stroke-width='1'/%3E%3Cpath d='M8.2 13.4V5' stroke='%23a8802f' stroke-width='2.4' stroke-linecap='round'/%3E%3Cpath d='M5.4 5h5.6' stroke='%23a8802f' stroke-width='2.4' stroke-linecap='round'/%3E%3C/svg%3E">
+          </div>
+
+          <p class="game__hint">Drag across the snow to shovel. Every tile you clear costs one stroke, and one tile of snow falls again straight after. Open the path from the gate to the tree before the strokes run out.</p>
+
+          <div class="game__foot">
+            <span class="result" id="result"></span>
+            <button class="brass-btn" id="reset" type="button">Start again</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="site-foot__seal" aria-hidden="true">
+      <svg viewBox="0 0 48 48" focusable="false">
+        <circle cx="24" cy="24" r="22" fill="#5f1d2a"/>
+        <circle cx="24" cy="24" r="22" fill="none" stroke="#3c1119" stroke-width="2"/>
+        <circle cx="24" cy="24" r="17" fill="none" stroke="#d9b45f" stroke-width="1.3" opacity="0.85"/>
+        <path d="M24 13.5l5.4 9.2h-3.3l3.5 5.8H18.4l3.5-5.8h-3.3z" fill="#e8cf92"/>
+        <rect x="22.6" y="28.4" width="2.8" height="3.4" fill="#e8cf92"/>
+      </svg>
+    </div>
+    <p>The Attic Desk &middot; written by lamplight</p>
+    <p class="quiet">No trackers, no cookies, nothing to sign up for. The snow is only CSS.</p>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+<script src="machine.js"></script>
+</body>
+</html>

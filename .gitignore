@@ -1,0 +1,13 @@
+# nothing here is generated, but just in case
+.DS_Store
+Thumbs.db
+*.log
+
+# editors
+.vscode/
+.idea/
+*.swp
+
+# local builds
+node_modules/
+dist/
